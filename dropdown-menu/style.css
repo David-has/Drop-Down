@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(55, 58, 93)
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height: 70px;
+    background: white;
+}
+
+.info {
+    display: grid;
+    position: relative;
+    cursor: pointer;
+}
+
+.info h3,
+.info h5 {
+    position: relative;
+    left: -70px;
+    top: 30px
+}
+
+img {
+    position: relative;
+    top: -25px;
+    left: -10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+ion-icon {
+    font-size: 45px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: gray;
+}
+
+.drop-down {
+    display: none;
+    height: 0;
+}
+
+.drop-down.active {
+    display: flex;
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    right: 47.5rem;
+    top: 33rem;
+    background: white;
+    transition: 0.5s;
+}
+
+.drop-down .icon {
+    font-size: 23px;
+    position: relative;
+    left: -7px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 10px;
+    list-style: none;
+    top: 10px;
+}
+
+a {
+    position: absolute;
+    left: 35px;
+    text-decoration: none;
+    color: gray;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: black;
+    font-weight: 400;
+}
+
+.drop-down::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: white;
+    right: 26px;
+    top: -13px;
+    transform: rotateZ(45deg);
+}
